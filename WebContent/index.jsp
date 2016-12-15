@@ -20,24 +20,6 @@ div.ex {
 }
 </style>
 
-<button id="verifyConnection" class="verifyConnection">Verify Connection</button>
-<script type="text/javascript">
-
-$(document).on('click', '.verifyConnection', function(event){
-	alert('Going to verify database connection');
-	$.ajax({
-		type: "POST",
-		url: "UserRegistrationServlet"+"?action=verifyConnection", 
-		success: function(msg){
-			$('#result').html(msg);
-		},
-		error: function(){
-			$('#result').html(msg);
-		}
-	});
-	 event.preventDefault();
-});
-</script>
 
 <button id="createtable" class="createtable">Create Table in MySQL</button>
 <script type="text/javascript">
